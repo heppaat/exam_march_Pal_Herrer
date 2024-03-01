@@ -9,6 +9,8 @@ server.use(cors());
 
 server.use(express.json());
 
+type User = { email: string; password: string; confirmPassword: string };
+
 const readFile = async () => {
   try {
     const data = await fs.readFile(`${__dirname}/../database.json`, "utf-8");
@@ -37,7 +39,7 @@ server.post("/api/register", async (req, res) => {
 
   const existingUsers = await readFile();
 
-  if (existingUsers.find((user) => user.email === email)) {
+  if (existingUsers.find((user: User) => user.email === email)) {
     return res.status(400).send("This email is already registered");
   }
 
@@ -51,3 +53,5 @@ server.post("/api/register", async (req, res) => {
 
   res.send("Registration successfull");
 });
+
+server.listen(5001);
