@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,28 @@
   </head>
   <body>
     <div id="app"></div>
+    <form id="registration">
+      <label for="nameInput"></label>
+      <input
+        type="text"
+        id="emailInput"
+        autofocus="autofocus"
+        placeholder="Type your email"
+      />
+      <input
+        type="text"
+        id="password"
+        autofocus="autofocus"
+        placeholder="Password"
+      />
+      <input
+        type="text"
+        id="passwordConfirmation"
+        autofocus="autofocus"
+        placeholder="Confirm your password"
+      />
+      <button type="submit" id="submit">Submit</button>
+    </form>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
