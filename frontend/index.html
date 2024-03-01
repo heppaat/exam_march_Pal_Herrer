@@ -8,28 +8,35 @@
   </head>
   <body>
     <div id="app"></div>
-    <form id="registration">
-      <label for="nameInput"></label>
+    <div id="registrationForm">
       <input
-        type="text"
-        id="emailInput"
+        type="email"
+        id="email"
         autofocus="autofocus"
-        placeholder="Type your email"
+        placeholder="Email address"
       />
       <input
-        type="text"
+        type="password"
         id="password"
         autofocus="autofocus"
         placeholder="Password"
       />
       <input
-        type="text"
-        id="passwordConfirmation"
+        type="password"
+        id="confirmPassword"
         autofocus="autofocus"
         placeholder="Confirm your password"
       />
-      <button type="submit" id="submit">Submit</button>
-    </form>
+      <button type="submit" id="registerButton">Register</button>
+    </div>
+
+    <div id="successMessage" style="display: none">
+      Registration successfull!<br /><button id="backButton">
+        Back to homepage
+      </button>
+    </div>
+
+    <div id="errorMessage" style="display: none"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

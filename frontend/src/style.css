@@ -4,3 +4,21 @@
   border: 0;
   box-sizing: border-box;
 }
+
+.error {
+  border: 1px solid red;
+}
+
+.success {
+  border: 1px solid green;
+}
+
+#errorMessage {
+  color: red;
+  margin-bottom: 10px;
+}
+
+#successMessage {
+  color: green;
+  margin-bottom: 10px;
+}

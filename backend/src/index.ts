@@ -48,4 +48,6 @@ server.post("/api/register", async (req, res) => {
     `${__dirname}/../database.json`,
     JSON.stringify(updatedUsers, null, 2)
   );
+
+  res.send("Registration successfull");
 });
